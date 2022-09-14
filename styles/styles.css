@@ -1,0 +1,279 @@
+/* -------
+   GENERAL
+   -------
+*/
+
+body {
+    background-image: url('../images/bg-x.png');
+    background-color: #1F2729;    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #BFBDCA;
+    font-family: 'Cinzel', serif;
+}
+
+/* ------
+   COLORS
+   ------
+*/
+
+.gold {
+    color: #AB8D60;
+}
+
+.gold-light {
+    color: #F4E0C2;
+}
+
+/* ----------
+   TYPOGRAPHY 
+   ----------
+*/
+
+h1 {
+    font-size: 48px;
+    margin-top: 1.25rem;
+    font-weight: 900;
+    color: #FFF;
+}
+
+h2,
+h3 {
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Lora', serif;
+}
+
+.text-uppercase {
+    font-weight: 700;
+    text-shadow: 0px 0px 5px black;
+}
+
+/* -------
+   LAYOUT 
+   -------
+*/
+
+.spaces {
+    padding: 1.25rem 0.75rem;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+#logo {
+    width: 30px;
+}
+
+#sections {
+    max-width: 450px;
+    height: 80vh;
+}
+
+#validacion {
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+}
+
+form {
+    font-family: 'Lora', serif;
+}
+
+label,
+.form-control {
+    font-weight: 700;
+}
+
+.form-control {
+    color: #AB8D60;
+}
+
+.form-control:focus {
+    color: #F4E0C2;
+    background-color: rgba(171, 141, 96, .1);
+    border-color: #AB8D60;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(171, 141, 96, 1)
+  }
+
+#cartas {
+    min-height: 100vh;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.icon {
+    max-height: 40px;
+}
+
+.txt-descripcion {
+    font-family: 'Lora', serif;
+    min-height: 200px;
+    position: relative;
+}
+
+.carousel-indicators {
+    position: static;
+    margin-top: auto;
+}
+
+.carousel-indicators button {
+    height: 10px !important;
+    width: 10px !important;
+    border-radius: 100%;
+    background-color: #BFBDCA !important;
+}
+
+#match {
+    font-size: 42px;
+    font-weight: 900;
+}
+
+footer {
+    position: sticky;
+    letter-spacing: 2px;
+    padding: 0.75rem;
+}
+
+.bg-gold {
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    background-color: rgba(171, 141, 96, .1);
+    border: 2px solid #AB8D60;
+}
+
+/* ------
+   IMAGES
+   ------
+*/
+
+.card-img img {
+    max-width: 220px;
+    max-height: 300px;
+    border-radius: 0.375rem;
+    object-fit: cover;
+    border: 10px solid #F4E0C2;
+}
+
+.results-img img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 5px solid #F4E0C2;
+
+}
+
+/* -------
+   BUTTONS
+   -------
+*/
+
+.btn-close {
+    display: block;
+    margin-left: auto;
+}
+
+.btn {
+    font-weight: 700;
+}
+
+.btn-c {
+    border: .25rem solid var(--glow-color);
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+    background-color: #AB8D60;
+    border-radius: 0.375rem;
+    color: #F4E0C2;
+}
+.btn-c:hover {
+    color: #fff;
+    box-shadow: 0px 3px 9px 1px #FEE4E4;
+    transform: translateY(-3px);
+    border: none;
+}
+
+/* ----------
+   ANIMATIONS
+   ----------
+*/
+
+.loader {
+    width: 6em;
+    height: 6em;
+    font-size: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loader .face {
+    position: absolute;
+    border-radius: 50%;
+    border-style: solid;
+    animation: animate023845 3s linear infinite;
+  }
+  
+  .loader .face:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    color: #F4E0C2;
+    border-color: currentColor transparent transparent currentColor;
+    border-width: 0.2em 0.2em 0em 0em;
+    --deg: -45deg;
+    animation-direction: normal;
+  }
+  
+  .loader .face:nth-child(2) {
+    width: 70%;
+    height: 70%;
+    color: #AB8D60;
+    border-color: currentColor currentColor transparent transparent;
+    border-width: 0.2em 0em 0em 0.2em;
+    --deg: -135deg;
+    animation-direction: reverse;
+  }
+  
+  .loader .face .circle {
+    position: absolute;
+    width: 50%;
+    height: 0.1em;
+    top: 50%;
+    left: 50%;
+    background-color: transparent;
+    transform: rotate(var(--deg));
+    transform-origin: left;
+  }
+  
+  .loader .face .circle::before {
+    position: absolute;
+    top: -0.5em;
+    right: -0.5em;
+    content: '';
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    border-radius: 50%;
+    box-shadow: 0 0 2em,
+                  0 0 4em,
+                  0 0 6em,
+                  0 0 8em,
+                  0 0 10em,
+                  0 0 0 0.5em rgba(255, 255, 0, 0.1);
+  }
+  
+  @keyframes animate023845 {
+    to {
+      transform: rotate(1turn);
+    }
+  }
